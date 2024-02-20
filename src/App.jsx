@@ -1,18 +1,15 @@
 import Header from "./components/Header";
-import { Home, Login, Register, Reset } from "./pages/index";
+import Pages from "./pages/Pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       <Router>
+        <ToastContainer />
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/reset" element={<Reset />} />
-        </Routes>
+        <Pages />
       </Router>
     </>
   );
